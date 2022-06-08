@@ -16,12 +16,49 @@
   <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
+  <!-- Title -->
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <h1>d</h1>
+ 
+  <div class="container">
+
+    <div id="standings">
+      <h2 class="desc desc-score">Score: <span class="score score-loser">0 - 1</span></h2>
+      <h2 class="desc desc-result">Result: <span class="result result-loser">You lost</span></h2>
+    </div>
+
+    <div id="game">
+
+      <div id="player">
+        <h2 class="desc">Choose:</h2>
+        <button id="rock-pick" class="game-elem" name="rock">
+          <img src="./img/rock.png" alt="rock">
+        </button>
+        <button id="paper-pick" class="game-elem" name="paper">
+          <img src="./img/paper.png" alt="paper">
+        </button>
+        <button id="scissors-pick" class="game-elem" name="scissors">
+          <img src="./img/scissors.png" alt="scissors">
+        </button>
+      </div>
+
+      <div id="computer">
+        <h2 class="desc">Computer: </h2>
+        <img src="./img/rock.png" alt="rock">
+      </div>
+
+    </div>
+
+  </div>
 
   <script src="./main.js"></script>
 </body>

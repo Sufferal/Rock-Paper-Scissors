@@ -1,3 +1,115 @@
-body {
-  background-color: red;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #34c8f9;
+}
+
+.container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  user-select: none;
+
+  width: 200px;
+  height: 200px;
+
+  padding: 2rem;
+}
+
+.container .desc {
+  font-size: 5rem;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  margin: 0;
+  color: rgb(154 72 159);
+  text-align: center;
+}
+
+#standings {
+  margin-bottom: 7rem;
+}
+
+#standings .desc {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+#standings .desc.desc-score,
+#standings .desc.desc-result {
+  color: #fc7a22;
+}
+
+#standings .score-winner,
+#standings .result-winner {
+  color: #3ab547;
+}
+
+#standings .score-loser,
+#standings .result-loser {
+  color: #cc1212;
+}
+
+#game {
+  display: flex;
+}
+
+#game #player, 
+#game #computer {
+  border: 4px solid #fff;
+}
+
+#game #player {
+  margin-right: 5rem;
+}
+
+#game #computer {
+  text-align: center;
+}
+
+.game-elem {
+  border: 0;
+  border-right: 5px solid #fff;
+  
+  padding: 0;
+  user-select: none;
+  background: none;
+  cursor: pointer;
+
+  transition: .2s all;
+}
+
+.game-elem:last-child {
+  margin-right: 0;
+  border-right: none;
+}
+
+.game-elem:hover {
+  background: rgb(154 72 159);
+  border-color: #fff;
+}
+
+
+
+
+
