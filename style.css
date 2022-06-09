@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
 
+  background: center/cover url("./img/background.jpg");
   background-color: #34c8f9;
 }
 
@@ -63,6 +64,11 @@ body {
 #standings .score-winner,
 #standings .result-winner {
   color: #3ab547;
+}
+
+#standings .score-draw,
+#standings .result-draw {
+  color: #f0d807;
 }
 
 #standings .score-loser,
