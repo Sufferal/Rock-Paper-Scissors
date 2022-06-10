@@ -13,8 +13,42 @@ Array.from(gameArr).forEach(elem => {
   elem.addEventListener('click', game);
 });
 
+// Controls events
+// window.addEventListener("keydown", gameControls);
+window.addEventListener("keydown", getPlayerPick);
+window.addEventListener("keydown", game);
+
+function gameControls(e) {
+  console.log(e.code);
+
+  rockElem.style.backgroundColor = "";
+  paperElem.style.backgroundColor = "";
+  scissorsElem.style.backgroundColor = "";
+
+  switch (e.code) {
+    case "KeyA":
+    case "Numpad1":
+      rockElem.style.backgroundColor = "#fff";
+      return "rock";
+      
+    case "KeyS":
+    case "Numpad2":
+      paperElem.style.backgroundColor = "#fff";
+      return "paper";
+      
+    case "KeyD":
+    case "Numpad3":
+      scissorsElem.style.backgroundColor = "#fff";
+      return "scissors";
+  
+    default:
+      console.log ("[WARNING]: Invalid or no key was pressed");
+      break;
+  }
+}
+
 function getPlayerPick(e) {
-  return e.target.alt;
+  return gameControls(e) || e.target.alt;
 }
 
 function getComputerPick() {
@@ -99,6 +133,10 @@ function playerLose() {
 }
 
 function game(e) {
+  if (typeof getPlayerPick(e) === "undefined") {
+    return false;
+  }
+  
   let playerPick = getPlayerPick(e);
   let computerPick = getComputerPick();
 
